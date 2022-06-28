@@ -22,7 +22,7 @@ public class AirportController {
     }
  
     @CrossOrigin
-    @GetMapping("/name/{city}")
+    @GetMapping("/{city}")
     public List<Airport> getByCityName(@PathVariable("city") String city){
 
         return airportService.getByCityName(city);
