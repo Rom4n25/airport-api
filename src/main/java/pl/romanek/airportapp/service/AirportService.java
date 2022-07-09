@@ -11,14 +11,14 @@ import pl.romanek.airportapp.repository.AirportRepository;
 @Service
 public class AirportService {
 
-AirportRepository airportRepository;
-    
+    AirportRepository airportRepository;
+
     @Autowired
     public AirportService(AirportRepository airportRepository) {
         this.airportRepository = airportRepository;
     }
 
-    public List<Airport> getByCityName (String city){
+    public List<Airport> getByCityName(String city) {
         return airportRepository.findAllByCity(city);
     }
 }

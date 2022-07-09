@@ -13,22 +13,19 @@ import pl.romanek.airportapp.service.AirportService;
 
 @RestController
 public class AirportController {
-    
+
     AirportService airportService;
-    
+
     @Autowired
     public AirportController(AirportService airportService) {
         this.airportService = airportService;
     }
- 
+
     @CrossOrigin
     @GetMapping("/{city}")
-    public List<Airport> getByCityName(@PathVariable("city") String city){
+    public List<Airport> getByCityName(@PathVariable("city") String city) {
 
         return airportService.getByCityName(city);
     }
-
-
-
 
 }
