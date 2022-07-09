@@ -19,6 +19,8 @@ public class AirportService {
     }
 
     public List<Airport> getByCityName(String city) {
-        return airportRepository.findAllByCity(city);
+        String cityName = (city.charAt(0) + "").toUpperCase() + city.toLowerCase().substring(1);
+
+        return airportRepository.findAllByCity(cityName);
     }
 }
