@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="airports")
+@Table(name = "airports")
 public class Airport {
     @Id
     private String key;
@@ -14,6 +14,8 @@ public class Airport {
     private String name;
     private String city;
     private String country;
+    private String lat;
+    private String lon;
 
     public Airport() {
     }
@@ -65,4 +67,21 @@ public class Airport {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    public String getLat() {
+        return this.lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLon() {
+        return this.lon;
+    }
+
+    public void setLon(String lon) {
+        this.lon = lon;
+    }
+
 }
